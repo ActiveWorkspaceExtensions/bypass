@@ -37,11 +37,34 @@ ___
 
 ### View
 #### Elements
+aw-checkbox
+visible-when
 #### Conditions
+Group: dba (ctx.userSession.props.role.uiValue=='DBA')
+Role: DBA (ctx.userSession.props.role.uiValue=='DBA')
+Location: User Profile (ctx.userSession.props.user.dbValue==ctx.selected.uid)
 
 ### Viewmodel
-``` json
-```
 #### Imports
+``` json
+"js/aw-checkbox.directive",
+"js/visible-when.directive"
+```
 #### Actions
+``` json
+        "toggle": {
+            "actionType": "TcSoaService",
+            "serviceName": "Core-2007-12-Session",
+            "method": "setUserSessionState",
+            "inputData": {
+                "pairs": [{
+                    "name": "fnd0bypassflag",
+                    "value": "{{(ctx.userSession.props.fnd0bypassflag.dbValue) ? '1' : '0'}}"
+                }]
+            }
+        }
+```
 #### SOA
+![image](https://user-images.githubusercontent.com/44880206/145596241-9ad84fa1-9f0a-4426-bd93-fcfd94616250.png)
+
+
