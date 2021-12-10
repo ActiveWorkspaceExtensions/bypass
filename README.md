@@ -2,7 +2,7 @@
 
 ## Deployment Instructions
 ### Source Code Deployment
-**Copy** and **Paste** the **\src\bypass** directory into **%TC_ROOT%\aws2\stage**, then run the following commands in a Teamcenter command terminal:
+**Copy** and **Paste** the **\src** directory into **%TC_ROOT%\aws2\stage**, then run the following commands in a Teamcenter command terminal:
 ``` cmd
 cd %TC_ROOT%\aws2\stage
 initenv.cmd
