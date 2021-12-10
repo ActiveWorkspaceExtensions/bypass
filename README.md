@@ -12,7 +12,7 @@ ___
 ### Stylesheet Modifications
 Modify the Awp0UserSummary stylesheet using either the Rich Client or XRTEditor in Active Workspace.
 
-**A sample of this stylesheet has been included in the solution media.**
+**A sample of this [stylesheet](https://github.com/ActiveWorkspaceExtensions/bypass/blob/main/Awp0UserSummary.xml) has been included in the solution media.**
 
 ``` html
 <section titleKey="Bypass" >
