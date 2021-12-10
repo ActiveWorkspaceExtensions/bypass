@@ -1,0 +1,21 @@
+{
+    "schemaVersion": "1.0.0",
+    "imports": [
+        "js/aw-checkbox.directive",
+        "js/visible-when.directive"
+    ],
+    "data": {},
+    "actions": {
+        "toggle": {
+            "actionType": "TcSoaService",
+            "serviceName": "Core-2007-12-Session",
+            "method": "setUserSessionState",
+            "inputData": {
+                "pairs": [{
+                    "name": "fnd0bypassflag",
+                    "value": "{{(ctx.userSession.props.fnd0bypassflag.dbValue) ? '1' : '0'}}"
+                }]
+            }
+        }
+    }
+}

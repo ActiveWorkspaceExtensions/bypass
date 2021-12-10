@@ -1,0 +1,17 @@
+{
+    "name": "bypass",
+    "desc": "This is the bypass module",
+    "type": [
+        "native"
+    ],
+    "skipTest": true,
+    "typeProperties": {
+        "typeProperties": {
+            "UserSession": {
+                "additionalProperties": [{
+                    "name": "fnd0bypassflag"
+                }]
+            }
+        }
+    }
+}
