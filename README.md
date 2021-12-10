@@ -17,6 +17,7 @@ Modify the Awp0UserSummary stylesheet using either the Rich Client or XRTEditor 
 
 **A sample of this [stylesheet](https://github.com/ActiveWorkspaceExtensions/bypass/blob/main/Awp0UserSummary.xml) has been included in the solution media.**
 
+Add the following section to the stylesheet to expose the Bypass Flag checkbox in the User summary stylesheet.
 ``` html
 <section titleKey="Bypass" >
     <htmlPanel declarativeKey="bypass" />
