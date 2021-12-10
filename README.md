@@ -1,11 +1,7 @@
----
-Active Workspace Bypass Customization
+# Active Workspace Bypass Customization
 
----
-
-
-# Active Workspace Bypass Deployment Instructions
-## Source Code Deployment
+## Deployment Instructions
+### Source Code Deployment
 **Copy** and **Paste** the **\src\bypass** directory into **%TC_ROOT%\aws2\stage**, then run the following commands in a Teamcenter command terminal:
 ``` cmd
 cd %TC_ROOT%\aws2\stage
@@ -13,7 +9,7 @@ initenv.cmd
 awbuild.cmd
 ```
 ___
-## Stylesheet Modifications
+### Stylesheet Modifications
 Modify the Awp0UserSummary stylesheet using either the Rich Client or XRTEditor in Active Workspace.
 
 **A sample of this stylesheet has been included in the solution media.**
