@@ -1,0 +1,20 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.558" y1="4.0913" x2="29.442" y2="15.9752">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#BEBEBE"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" stroke="#464646" stroke-miterlimit="10" d="M31.5,9.4c0,4.3-3.6,10.1-8,10.1s-8-5.8-8-10.1
+	s3.6-7.9,8-7.9S31.5,5,31.5,9.4z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="11.0354" y1="25.1063" x2="35.9646" y2="50.0354">
+	<stop  offset="0" style="stop-color:#73B4C8"/>
+	<stop  offset="0.1747" style="stop-color:#6AAEC3"/>
+	<stop  offset="0.4567" style="stop-color:#529EB5"/>
+	<stop  offset="0.8089" style="stop-color:#2C839F"/>
+	<stop  offset="1" style="stop-color:#147391"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" stroke="#464646" stroke-miterlimit="10" d="M38.5,47.5V31.3c0-3.8-2.4-7-6-8.8c-2.5,1.8-5.6,2.9-9,2.9
+	s-6.5-1.1-9-2.9c-3.6,1.7-6,5-6,8.8v16.2H38.5z"/>
+<line fill="none" stroke="#147391" stroke-linejoin="round" stroke-miterlimit="10" x1="14.5" y1="47" x2="14.5" y2="35"/>
+<line fill="none" stroke="#147391" stroke-linejoin="round" stroke-miterlimit="10" x1="32.5" y1="47" x2="32.5" y2="35"/>
+</svg>
