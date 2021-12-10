@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--===============================================================================
+Copyright (c) 2014 Siemens PLM Corporation
+Unpublished - All Rights Reserved
+===============================================================================
+
+Filename: Awp0UserSummary.xml
+
+Default style sheet for displaying User Object Summary Active Workspace.
+
+-->
+<rendering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLRenderingStylesheet_Schema.xsd">
+    <header>
+        <image source = "type"/>
+    </header>
+    <page titleKey="tc_xrt_Overview">
+        <column>
+            <section titleKey="Bypass" >
+                <htmlPanel declarativeKey="bypass" />
+            </section>
+            <section titleKey="tc_xrt_Properties">
+                <property name="user_name" />
+                <property name="user_id" />
+            </section>
+            <section titleKey="tc_xrt_OutOfOfficeSetting">
+                <property name="is_out_of_office"/>
+                <property name="inbox_delegate" modifiable="false"/>
+                <property name="fnd0OutOfOfficeStartDate"/>
+                <property name="fnd0OutOfOfficeEndDate"/>
+            </section>
+            <section>
+                <htmlPanel declarativeKey="UserProfileLocationProperty"/>
+            </section>
+            <section>
+                 <htmlPanel declarativeKey="Aut0UserMemberships"/>
+            </section>
+            <htmlPanel declarativeKey="Aut0RevokeConsent"/>
+            <property name="is_member_of_dba"/>
+            <section titleKey="tc_xrt_MySurrogates">
+                <html>
+                    <property name="fnd0HasManageSurrPrivilege" />
+                </html>
+                <objectSet source="awp0MySurrogates.Awp0UserAssignment" sortdirection="ascending" defaultdisplay="listDisplay">
+                    <command actionKey = "newBusinessObjectContextualAction" commandId="Awp0AddSurrogate" renderingHint = "commandbutton"/>
+                        <tableDisplay>
+                            <property name="awp0User"/>
+                            <property name="awp0StartDate"/>
+                            <property name="awp0EndDate"/>
+                            <property name="awp0EMail"/>
+                            <property name="awp0Phone"/>
+                        </tableDisplay>
+                        <listDisplay/>
+                </objectSet>
+            </section>
+            <section titleKey="tc_xrt_SurrogateFor">
+                <objectSet source="awp0SurrogateFor.Awp0UserAssignment" sortdirection="ascending" defaultdisplay="listDisplay">
+                    <tableDisplay>
+                        <property name="awp0User"/>
+                        <property name="awp0StartDate"/>
+                        <property name="awp0EndDate"/>
+                        <property name="awp0EMail"/>
+                        <property name="awp0Phone"/>
+                    </tableDisplay>
+                    <listDisplay/>
+                </objectSet>
+            </section>
+            <section>
+                 <htmlPanel declarativeKey="Awp0ResourcePoolSubscription" />
+            </section>
+        </column>
+        <column>
+            <section titleKey = "tc_xrt_Picture">
+                <htmlPanel declarativeKey="UserProfileImage"/>
+            </section>
+            <section>
+                 <htmlPanel declarativeKey="Awp0DSMIntegration"/>
+            </section>
+            <htmlPanel declarativeKey="Sub0SubscriptionSettings"/>
+            <content visibleWhen="{pref:AWC_REMOTE_SITE_URL}!=NULL and {pref:AWC_Enable_Multisite}==true">
+                <section titleKey="tc_xrt_RemoteInboxSubscription">
+                    <objectSet source="Fnd0RemoteInboxProvider.TaskInbox" defaultdisplay="tableDisplay" sortby="last_mod_date" sortdirection="descending" >
+                        <tableDisplay>
+                            <property name="owning_site" modifiable="false"/>
+                            <property name="new_tasks_count" modifiable="false"/>
+                            <property name="last_mod_date" modifiable="false"/>
+                        </tableDisplay>
+                            <command actionKey="pasteAction" commandId="Awp0AddRemoteInboxCmd" renderingHint="commandbutton"/>
+                            <command actionKey="cutAction" commandId="Awp0RemoveRemoteInboxCmd" renderingHint="commandbutton"/>
+                    </objectSet>
+                </section>
+            </content>
+        </column>
+    </page>
+    <inject type="dataset" src="AuditLogForUserContext"/>
+</rendering>
+
