@@ -1,5 +1,8 @@
 # Active Workspace Bypass Customization
 
+## Overview
+Customization to disable the rule tree. This gives unrestricted access to objects in Active Workspace.
+
 ## Deployment Instructions
 ### Source Code Deployment
 **Copy** and **Paste** the **\src** directory into **%TC_ROOT%\aws2\stage**, then run the following commands in a Teamcenter command terminal:
