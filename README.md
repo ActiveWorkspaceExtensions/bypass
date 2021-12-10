@@ -22,7 +22,7 @@ Modify the Awp0UserSummary stylesheet using either the Rich Client or XRTEditor 
 ___
 ## Validation
 - Login to the Active Workspace Client after successfully running the awbuild.cmd.
-- Find an object which the logged in user does not have write access to **(Example in video of an object with Obsolete status)**
+- Find an object which the logged in user does not have write access to **(Example in video of an object with *Obsolete* status)**
 - Verify that the **Edit** &rarr; **Start Edit** command is not available when selecting the object.
 - Select on the <img src="./typePerson48.svg" width="24" height="24"> icon in the bottom left corner of the client, then select **Profile**.
 - Select the aw-checkbox labeled **Bypass Flag** to enable the bypass feature.
