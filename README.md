@@ -40,9 +40,9 @@ ___
 - aw-checkbox
 - visible-when
 #### Conditions
-Group: dba (ctx.userSession.props.role.uiValue=='DBA')
-Role: DBA (ctx.userSession.props.role.uiValue=='DBA')
-Location: User Profile (ctx.userSession.props.user.dbValue==ctx.selected.uid)
+- **Group**: dba (ctx.userSession.props.role.uiValue=='DBA')
+- **Role**: DBA (ctx.userSession.props.role.uiValue=='DBA')
+- **Location**: User Profile (ctx.userSession.props.user.dbValue==ctx.selected.uid)
 
 ### Viewmodel
 #### Imports
