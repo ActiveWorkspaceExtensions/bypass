@@ -27,6 +27,10 @@ ___
 - Select on the user avatar icon in the bottom left corner of the client, then select **Profile**.
 - Select the checkbox labeled Bypass Flag to enable the bypass feature.
 - 
+
+https://user-images.githubusercontent.com/44880206/145594000-9b6e747a-3392-471e-a905-2b43470cf55b.mp4
+
+
 ___
 ## Solution Definition
 
