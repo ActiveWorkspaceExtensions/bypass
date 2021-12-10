@@ -44,7 +44,7 @@ ___
 - **Role**: DBA (ctx.userSession.props.role.uiValue=='DBA')
 - **Location**: User Profile (ctx.userSession.props.user.dbValue==ctx.selected.uid)
 
-### Viewmodel
+### View Model
 #### Imports
 ``` json
 "js/aw-checkbox.directive",
