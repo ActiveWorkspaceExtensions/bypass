@@ -37,8 +37,8 @@ ___
 
 ### View
 #### Elements
-aw-checkbox
-visible-when
+- aw-checkbox
+- visible-when
 #### Conditions
 Group: dba (ctx.userSession.props.role.uiValue=='DBA')
 Role: DBA (ctx.userSession.props.role.uiValue=='DBA')
