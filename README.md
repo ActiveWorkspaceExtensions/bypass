@@ -25,8 +25,9 @@ ___
 - Find an object which the logged in user does not have write access to **(Example in video of an object with Obsolete status)**
 - Verify that the **Edit** &rarr; **Start Edit** command is not available when selecting the object.
 - Select on the <img src="./typePerson48.svg" width="24" height="24"> icon in the bottom left corner of the client, then select **Profile**.
-- Select the checkbox labeled Bypass Flag to enable the bypass feature.
-- 
+- Select the aw-checkbox labeled **Bypass Flag** to enable the bypass feature.
+- Navigate back to the object and verify **Edit** &rarr; **Start Edit** is now available and changes can be made to the object properties.
+- To disable Bypass, navigate back to Profile and uncheck the aw-checkbox.
 
 https://user-images.githubusercontent.com/44880206/145594000-9b6e747a-3392-471e-a905-2b43470cf55b.mp4
 
@@ -34,3 +35,13 @@ https://user-images.githubusercontent.com/44880206/145594000-9b6e747a-3392-471e-
 ___
 ## Solution Definition
 
+### View
+#### Elements
+#### Conditions
+
+### Viewmodel
+``` json
+```
+#### Imports
+#### Actions
+#### SOA
