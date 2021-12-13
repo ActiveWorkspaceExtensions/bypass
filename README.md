@@ -31,9 +31,10 @@ ___
 - Select on the <img src="./typePerson48.svg" width="24" height="24"> icon in the bottom left corner of the client, then select **Profile**.
 - Select the aw-checkbox labeled **Bypass Flag** to enable the bypass feature.
 - Navigate back to the object and verify **Edit** &rarr; **Start Edit** is now available and changes can be made to the object properties.
-- To disable Bypass, navigate back to Profile and uncheck the aw-checkbox.
+- To disable Bypass, navigate back to Profile and uncheck the aw-togglebutton.
 
-https://user-images.githubusercontent.com/44880206/145594000-9b6e747a-3392-471e-a905-2b43470cf55b.mp4
+https://user-images.githubusercontent.com/44880206/145828924-706769a4-443f-497a-91e5-f349b4fe0f37.mp4
+
 
 
 ___
@@ -41,7 +42,9 @@ ___
 
 ### View
 #### Elements
-- aw-checkbox
+- aw-panel
+- aw-panel-section
+- aw-togglebutton
 - visible-when
 #### Conditions
 - **Group**: dba (ctx.userSession.props.role.uiValue=='DBA')
@@ -51,22 +54,24 @@ ___
 ### View Model
 #### Imports
 ``` json
-"js/aw-checkbox.directive",
-"js/visible-when.directive"
+"js/visible-when.directive",
+"js/aw-togglebutton.directive",
+"js/aw-panel.directive",
+"js/aw-panel-section.directive"
 ```
 #### Actions
 ``` json
-        "toggle": {
-            "actionType": "TcSoaService",
-            "serviceName": "Core-2007-12-Session",
-            "method": "setUserSessionState",
-            "inputData": {
-                "pairs": [{
-                    "name": "fnd0bypassflag",
-                    "value": "{{(ctx.userSession.props.fnd0bypassflag.dbValue) ? '1' : '0'}}"
-                }]
-            }
-        }
+"toggle": {
+    "actionType": "TcSoaService",
+    "serviceName": "Core-2007-12-Session",
+    "method": "setUserSessionState",
+    "inputData": {
+        "pairs": [{
+            "name": "fnd0bypassflag",
+            "value": "{{(ctx.userSession.props.fnd0bypassflag.dbValue) ? '1' : '0'}}"
+        }]
+    }
+}
 ```
 #### SOA
 ![image](https://user-images.githubusercontent.com/44880206/145596241-9ad84fa1-9f0a-4426-bd93-fcfd94616250.png)
