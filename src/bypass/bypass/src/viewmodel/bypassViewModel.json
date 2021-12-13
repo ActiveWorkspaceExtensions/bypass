@@ -1,10 +1,22 @@
 {
     "schemaVersion": "1.0.0",
     "imports": [
-        "js/aw-checkbox.directive",
-        "js/visible-when.directive"
+        "js/visible-when.directive",
+        "js/aw-togglebutton.directive",
+        "js/aw-panel.directive",
+        "js/aw-panel-section.directive"
     ],
-    "data": {},
+    "data": {
+        "bypassToggle": {
+            "displayName": "Bypass",
+            "type": "BOOLEAN",
+            "isRequired": "false",
+            "isEditable": "true",
+            "dbValue": "ctx.userSession.props.fnd0bypassflag.dbValue",
+            "uiValue": "ctx.userSession.props.fnd0bypassflag.uiValue",
+            "labelPosition": "PROPERTY_LABEL_AT_SIDE"
+        }
+    },
     "actions": {
         "toggle": {
             "actionType": "TcSoaService",
