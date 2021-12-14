@@ -1,5 +1,48 @@
 # Active Workspace Bypass Customization
+## Version 1.1 Release Notes
+- Added command to the Global Navigation toolbar
+### Images
+- Added supporting icon images to [image](https://github.com/ActiveWorkspaceExtensions/bypass/tree/main/src/bypass/src/image) which will be included in deployment.
+### Commands View Model
+#### Commands
+- enableBypassCommand  ![image](https://user-images.githubusercontent.com/44880206/146063865-dae7e6fc-7f6c-49bc-bc7f-dcd3df9d15a0.png)
+- disableBypassCommand  ![image](https://user-images.githubusercontent.com/44880206/146063737-1128c872-0d4f-484b-8cdc-de89d7f30fc7.png)
 
+
+#### Command Handlers
+- Handlers call an action to either enable or disable bypass.
+#### Command Placements
+- Both enable/disable bypass are located on the aw_globalNavigationbar uiAnchor.
+#### Actions
+- **enableBypass:** SOA service to setUserSessionState value to 1 and subsequent event to reload page allowing refresh of ViewModel object permissions. 
+
+- **disableBypass:** SOA service to setUserSessionState value to 1 and subsequent event to reload page allowing refresh of ViewModel object permissions.
+#### On Event
+``` json
+    "onEvent": [
+        {
+            "eventId": "enableBypass.reload",
+            "action": "reloadPage"
+        },
+        {
+            "eventId": "disableBypass.reload",
+            "action": "reloadPage"
+        }
+    ]
+```
+#### Conditions
+```json
+"conditions": {
+    "showEnableBypass": {
+        "expression": " ctx.userSession.props.group_name.dbValue=='dba' && ctx.userSession.props.role.uiValue=='DBA' && ctx.userSession.props.fnd0bypassflag.dbValues[0] === '0'"
+    },
+    "showDisableBypass": {
+        "expression": "ctx.userSession.props.group_name.dbValue=='dba' && ctx.userSession.props.role.uiValue=='DBA' && ctx.userSession.props.fnd0bypassflag.dbValues[0] === '1'"
+        }
+    }
+```
+
+___
 ## Overview
 Customization to disable the rule tree. This gives unrestricted access to objects in Active Workspace.
 
@@ -75,5 +118,7 @@ ___
 ```
 #### SOA
 ![image](https://user-images.githubusercontent.com/44880206/145596241-9ad84fa1-9f0a-4426-bd93-fcfd94616250.png)
+
+
 
 
