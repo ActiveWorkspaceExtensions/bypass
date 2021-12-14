@@ -1,0 +1,10 @@
+{
+    "name": "bypass",
+    "level": 7,
+    "kitDeps": [
+        "tc-aw-solution"
+    ],
+    "modules": [
+        "bypass"
+    ]
+}

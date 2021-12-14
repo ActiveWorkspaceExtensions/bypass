@@ -1,0 +1,113 @@
+{
+    "schemaVersion": "1.0.0",
+    "commands": {
+        "enableBypassCommand": {
+            "iconId": "cmdBypass",
+            "isGroup": false,
+            "title": "Bypass"
+        },
+        "disableBypassCommand": {
+            "iconId": "cmdBypassActive",
+            "isGroup": false,
+            "title": "Bypass"
+        }
+    },
+    "commandHandlers": {
+        "enableBypassCommandHandler": {
+            "id": "enableBypassCommand",
+            "action": "enableBypass",
+            "activeWhen": {
+                "condition": "conditions.showEnableBypass"
+            },
+            "visibleWhen": {
+                "condition": "conditions.showEnableBypass"
+            }
+        },
+        "disableBypassCommandHandler": {
+            "id": "disableBypassCommand",
+            "action": "disableBypass",
+            "activeWhen": {
+                    "condition": "conditions.showDisableBypass"
+            },
+            "visibleWhen": {
+                "condition": "conditions.showDisableBypass"
+            }
+        }
+    },
+    "commandPlacements": {
+        "enableBypassCommandPlacement": {
+            "id": "enableBypassCommand",
+            "uiAnchor": "aw_globalNavigationbar",
+            "priority": 100
+        },
+        "disableBypassCommandPlacement": {
+            "id": "disableBypassCommand",
+            "uiAnchor": "aw_globalNavigationbar",
+            "priority": 100
+        }
+    },
+    "actions": {
+        "enableBypass": {
+            "actionType": "TcSoaService",
+            "serviceName": "Core-2007-12-Session",
+            "method": "setUserSessionState",
+            "inputData": {
+                "pairs": [{
+                    "name": "fnd0bypassflag",
+                    "value": "1"
+                }]
+            },
+            "events": {
+                "success": [
+                    {
+                        "name": "enableBypass.reload"
+                    }
+                ]
+            }
+        },
+        "disableBypass": {
+            "actionType": "TcSoaService",
+            "serviceName": "Core-2007-12-Session",
+            "method": "setUserSessionState",
+            "inputData": {
+                "pairs": [{
+                    "name": "fnd0bypassflag",
+                    "value": "0"
+                }]
+            },
+            "events": {
+                "success": [
+                    {
+                        "name": "disableBypass.reload"
+                    }
+                ]
+            }
+        },
+        "reloadPage": {
+            "actionType": "JSFunction",
+            "method": "reloadPage",
+            "inputData": {},
+            "deps": "js/workspaceService"
+        }       
+    },
+    "onEvent": [
+        {
+            "eventId": "enableBypass.reload",
+            "action": "reloadPage"
+        },
+        {
+            "eventId": "disableBypass.reload",
+            "action": "reloadPage"
+        }
+    ],
+    "conditions": {
+        "showEnableBypass": {
+            "expression": " ctx.userSession.props.group_name.dbValue=='dba' && ctx.userSession.props.role.uiValue=='DBA' && ctx.userSession.props.fnd0bypassflag.dbValues[0] === '0'"
+        },
+        "showDisableBypass": {
+            "expression": "ctx.userSession.props.group_name.dbValue=='dba' && ctx.userSession.props.role.uiValue=='DBA' && ctx.userSession.props.fnd0bypassflag.dbValues[0] === '1'"
+        }
+    },
+    "messages": {},
+    "i18n": {}
+}

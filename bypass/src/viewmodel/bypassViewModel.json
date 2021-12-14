@@ -1,0 +1,33 @@
+{
+    "schemaVersion": "1.0.0",
+    "imports": [
+        "js/visible-when.directive",
+        "js/aw-togglebutton.directive",
+        "js/aw-panel.directive",
+        "js/aw-panel-section.directive"
+    ],
+    "data": {
+        "bypassToggle": {
+            "displayName": "Bypass",
+            "type": "BOOLEAN",
+            "isRequired": "false",
+            "isEditable": "true",
+            "dbValue": "ctx.userSession.props.fnd0bypassflag.dbValue",
+            "uiValue": "ctx.userSession.props.fnd0bypassflag.uiValue",
+            "labelPosition": "PROPERTY_LABEL_AT_SIDE"
+        }
+    },
+    "actions": {
+        "toggle": {
+            "actionType": "TcSoaService",
+            "serviceName": "Core-2007-12-Session",
+            "method": "setUserSessionState",
+            "inputData": {
+                "pairs": [{
+                    "name": "fnd0bypassflag",
+                    "value": "{{(ctx.userSession.props.fnd0bypassflag.dbValue) ? '1' : '0'}}"
+                }]
+            }
+        }
+    }
+}

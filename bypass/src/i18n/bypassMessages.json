@@ -1,0 +1,12 @@
+{
+    "enableBypassTitle": "Enable Bypass",
+    "disableBypassTitle": "Disable Bypass",
+    "header": "Header",
+    "body": "Body",
+    "footer": "Footer",
+    "checkBoxName": "Enable the OK button in footer",
+    "save": "Ok",
+    "textValue": "Contents here",
+    "bypassCommandTitle": "bypassCommand",
+    "bypassCommandDescription": "bypassCommandDescription"
+}
